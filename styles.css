@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
+    font-family: "Poppins";
 }
 body{
     display: flex;
     justify-content: center;
     min-height: 100vh;
     align-items: center;
-    background-color: #091921;
+    /* background-color: #091921; */
 }
 .heading {
-    color: #fff;
+    /* color: #fff; */
     text-align: center;
     font-size: 2em;
     margin: 2em 0;
@@ -43,6 +45,7 @@ body{
     z-index: 1;
     overflow: auto;
     opacity: 0;
+    transition: opacity .4s linear;
     pointer-events: none;
 }
 .modalContent {
@@ -55,19 +58,9 @@ body{
 .modalImg {
     width: 80%;
     max-width: 700px;
-    animation: zoom 0.7s linear;
-}
-@keyframes zoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
 }
 .modalTxt {
     margin-top: 1em;
-    animation: zoom 0.7s linear;
 }
 .close {
     position: absolute;
@@ -75,4 +68,22 @@ body{
     right: 1.5em;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.modal.appear {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal.appear .modalImg,
+  .modal.appear .modalTxt {
+   animation: zoom 0.7s linear;
+  }
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
