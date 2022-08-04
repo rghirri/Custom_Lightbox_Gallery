@@ -22,6 +22,7 @@ body{
 .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
     grid-gap: 1em;
     margin: 0 1em;
 }
@@ -56,12 +57,26 @@ body{
     align-items: center;
 }
 .modalImg {
-    width: 80%;
+    /* width: 80%; */
     max-width: 700px;
 }
 .modalTxt {
     margin-top: 1em;
 }
+.modalNav {
+    margin-top: 1em;
+  }
+  .modalNav button {
+    padding: 10px 45px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  .nextBtn {
+    margin-left: 1em;
+  }
 .close {
     position: absolute;
     top: 1em;
